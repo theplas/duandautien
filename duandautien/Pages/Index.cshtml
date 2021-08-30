@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h3>Message</h3>
+<form method="Post">
+    <p>
+        <button class="btn btn-primary" type="submit">Send Post request</button>
+    </p>
+</form>
+
+<p>
+    <a href="/" class="btn btn-primary">Send Get request</a>
+</p>
+
+@functions{
+        public string Message { get; set; }
+
+        public void OnGet()
+        {
+            Message = "nguyen";
+        }
+        public void OnPost()
+        {
+            Message = "nguyenPost";
+        }
+
+}
